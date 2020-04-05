@@ -9,16 +9,12 @@ import android.view.MenuItem
 import com.google.firebase.auth.FirebaseAuth
 
 private const val TAG="ProfileActivity"
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : PostsActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
-    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_profile,menu)
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
