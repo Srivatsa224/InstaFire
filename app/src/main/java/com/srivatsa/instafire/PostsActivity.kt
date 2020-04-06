@@ -80,6 +80,15 @@ open class PostsActivity : AppCompatActivity() {
                 Log.i(TAG,"Post ${post}")
             }
         }
+
+        fabCreate.setOnClickListener {
+            val intent=Intent(this,CreateActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
        menuInflater.inflate(R.menu.menu_posts,menu)
