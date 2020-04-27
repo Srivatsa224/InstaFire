@@ -61,6 +61,7 @@ open class PostsActivity : AppCompatActivity() {
         val username= intent.getStringExtra(EXTRA_USERNAME)
         if(username!=null){
             supportActionBar?.title=username
+            supportActionBar?.setIcon(R.drawable.instafire)
            postsReference= postsReference.whereEqualTo("user.username",username)
 
         }
