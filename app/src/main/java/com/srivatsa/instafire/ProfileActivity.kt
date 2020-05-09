@@ -21,7 +21,10 @@ class ProfileActivity : PostsActivity() {
         if(item.itemId==R.id.menu_logout){
              Log.i(TAG,"User wants to logout")
             FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this,LoginActivity::class.java))
+            val intent=Intent(this,LoginActivity::class.java)
+            intent.flags=Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+
         }
         return super.onOptionsItemSelected(item)
     }
